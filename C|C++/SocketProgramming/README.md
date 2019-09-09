@@ -17,7 +17,7 @@ $ doxygen doxygen.conf
 
 |S.No| FileName                           | Content                                                                                           |
 |----| -----------------------------------|:-------------------------------------------------------------------------------------------------:|
-|1.  | Socket.h                           | Header file for generic Socket functionalities.                                                   |
-|2.  | SocketClient.h                     | Header file for Socket-Client functionalities.                                                    |
-|3.  | SocketServer.h                     | Header file for Socket-Server functionalities.                                                    |
+|1.  | lib/Socket.h                           | Header file for generic Socket functionalities.                                                   |
+|2.  | lib/SocketClient.h                     | Header file for Socket-Client functionalities.                                                    |
+|3.  | lib/SocketServer.h                     | Header file for Socket-Server functionalities.                                                    |
 
