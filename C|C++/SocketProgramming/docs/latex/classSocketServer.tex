@@ -1,0 +1,144 @@
+\hypertarget{classSocketServer}{}\section{Socket\+Server Class Reference}
+\label{classSocketServer}\index{Socket\+Server@{Socket\+Server}}
+
+
+\textquotesingle{}\hyperlink{classSocketServer}{Socket\+Server}\textquotesingle{} inherits form \textquotesingle{}\hyperlink{classSocket}{Socket}\textquotesingle{} class and is specifically designed for server mode.  
+
+
+
+
+{\ttfamily \#include $<$Socket\+Server.\+h$>$}
+
+
+
+Inheritance diagram for Socket\+Server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{classSocketServer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Socket\+Server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{classSocketServer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSocketServer_a262ba93dc8ad71b260fb75124b3453ee}{Socket\+Server} ()\hypertarget{classSocketServer_a262ba93dc8ad71b260fb75124b3453ee}{}\label{classSocketServer_a262ba93dc8ad71b260fb75124b3453ee}
+
+\begin{DoxyCompactList}\small\item\em Constructor of \hyperlink{classSocketServer}{Socket\+Server} Class. \end{DoxyCompactList}\item 
+int \hyperlink{classSocketServer_a50b619d415d32f52771b663b3036940c}{set\+Socket\+Options} ()
+\begin{DoxyCompactList}\small\item\em Sets up the necessary socket options. \end{DoxyCompactList}\item 
+int \hyperlink{classSocketServer_aaa25d38578f271ab252bf9f5ecafd2e4}{socket\+\_\+bind} (int port)
+\begin{DoxyCompactList}\small\item\em Binds to the port on all interfaces. \end{DoxyCompactList}\item 
+int \hyperlink{classSocketServer_af49cec86f9f7c45fbeca8b94c37ec0a1}{socket\+\_\+listen} ()
+\begin{DoxyCompactList}\small\item\em Starts to listen for incoming connections on above set interfaces and port via file-\/descriptor(present in socket class). \end{DoxyCompactList}\item 
+int \hyperlink{classSocketServer_add005b4dc2e06b847566952e52029585}{socket\+\_\+accept} ()
+\begin{DoxyCompactList}\small\item\em Accepts the incoming socket connection.. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classSocketServer_a7e2e444c9cb9a1d146fe33536eee5b2e}{set\+\_\+nonblocking} (int file\+Descriptor)
+\begin{DoxyCompactList}\small\item\em Sets the socket file-\/descriptor to non-\/blocking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\textquotesingle{}\hyperlink{classSocketServer}{Socket\+Server}\textquotesingle{} inherits form \textquotesingle{}\hyperlink{classSocket}{Socket}\textquotesingle{} class and is specifically designed for server mode. 
+
+This class encapsulates some low-\/level server specific socket functionalities and provide an easy to use interface for handling the sockets. 
+
+\subsection{Member Function Documentation}
+\index{Socket\+Server@{Socket\+Server}!set\+\_\+nonblocking@{set\+\_\+nonblocking}}
+\index{set\+\_\+nonblocking@{set\+\_\+nonblocking}!Socket\+Server@{Socket\+Server}}
+\subsubsection[{\texorpdfstring{set\+\_\+nonblocking(int file\+Descriptor)}{set_nonblocking(int fileDescriptor)}}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\+Server\+::set\+\_\+nonblocking (
+\begin{DoxyParamCaption}
+\item[{int}]{file\+Descriptor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSocketServer_a7e2e444c9cb9a1d146fe33536eee5b2e}{}\label{classSocketServer_a7e2e444c9cb9a1d146fe33536eee5b2e}
+
+
+Sets the socket file-\/descriptor to non-\/blocking. 
+
+Sets the server FD to non-\/blocking, mandatorily required in order for server to be asynchronous. 
+\begin{DoxyParams}{Parameters}
+{\em \textquotesingle{}int} & file\+Descriptor\textquotesingle{} \+: \hyperlink{classSocket}{Socket} to set non-\/blocking on. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Socket\+Server@{Socket\+Server}!set\+Socket\+Options@{set\+Socket\+Options}}
+\index{set\+Socket\+Options@{set\+Socket\+Options}!Socket\+Server@{Socket\+Server}}
+\subsubsection[{\texorpdfstring{set\+Socket\+Options()}{setSocketOptions()}}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\+Server\+::set\+Socket\+Options (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSocketServer_a50b619d415d32f52771b663b3036940c}{}\label{classSocketServer_a50b619d415d32f52771b663b3036940c}
+
+
+Sets up the necessary socket options. 
+
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}int\textquotesingle{} \+: -\/1 if fails to setup , else 0. 
+\end{DoxyReturn}
+\index{Socket\+Server@{Socket\+Server}!socket\+\_\+accept@{socket\+\_\+accept}}
+\index{socket\+\_\+accept@{socket\+\_\+accept}!Socket\+Server@{Socket\+Server}}
+\subsubsection[{\texorpdfstring{socket\+\_\+accept()}{socket_accept()}}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\+Server\+::socket\+\_\+accept (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSocketServer_add005b4dc2e06b847566952e52029585}{}\label{classSocketServer_add005b4dc2e06b847566952e52029585}
+
+
+Accepts the incoming socket connection.. 
+
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}int\textquotesingle{} \+: The file-\/\+Descriptor for accepted connection. 
+\end{DoxyReturn}
+\index{Socket\+Server@{Socket\+Server}!socket\+\_\+bind@{socket\+\_\+bind}}
+\index{socket\+\_\+bind@{socket\+\_\+bind}!Socket\+Server@{Socket\+Server}}
+\subsubsection[{\texorpdfstring{socket\+\_\+bind(int port)}{socket_bind(int port)}}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\+Server\+::socket\+\_\+bind (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\hypertarget{classSocketServer_aaa25d38578f271ab252bf9f5ecafd2e4}{}\label{classSocketServer_aaa25d38578f271ab252bf9f5ecafd2e4}
+
+
+Binds to the port on all interfaces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \textquotesingle{}int} & port\textquotesingle{} \+: Port number for the server to bind on. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}int\textquotesingle{} \+: -\/1 if fails to setup , else 0. 
+\end{DoxyReturn}
+\index{Socket\+Server@{Socket\+Server}!socket\+\_\+listen@{socket\+\_\+listen}}
+\index{socket\+\_\+listen@{socket\+\_\+listen}!Socket\+Server@{Socket\+Server}}
+\subsubsection[{\texorpdfstring{socket\+\_\+listen()}{socket_listen()}}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\+Server\+::socket\+\_\+listen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSocketServer_af49cec86f9f7c45fbeca8b94c37ec0a1}{}\label{classSocketServer_af49cec86f9f7c45fbeca8b94c37ec0a1}
+
+
+Starts to listen for incoming connections on above set interfaces and port via file-\/descriptor(present in socket class). 
+
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}int\textquotesingle{} \+: -\/1 if fails to setup , else 0. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{SocketServer_8h}{Socket\+Server.\+h}\item 
+Socket\+Server.\+cpp\end{DoxyCompactItemize}

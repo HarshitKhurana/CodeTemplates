@@ -1,0 +1,202 @@
+\hypertarget{classSocket}{}\section{Socket Class Reference}
+\label{classSocket}\index{Socket@{Socket}}
+
+
+Class responsible for managin low-\/level sockets.  
+
+
+
+
+{\ttfamily \#include $<$Socket.\+h$>$}
+
+
+
+Inheritance diagram for Socket\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{classSocket__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSocket_a7c3256c4fc6e2c603df73201049fae5a}{Socket} ()
+\begin{DoxyCompactList}\small\item\em Constructor of \hyperlink{classSocket}{Socket} Class. \end{DoxyCompactList}\item 
+\hyperlink{classSocket_aeac4eb6379a543d38ed88977d3b6630a}{$\sim$\+Socket} ()
+\begin{DoxyCompactList}\small\item\em Destructor of \hyperlink{classSocket}{Socket} Class. \end{DoxyCompactList}\item 
+int \hyperlink{classSocket_ac4bde0cd12b53244b7c143d056b383ba}{get\+File\+Descriptor} ()
+\begin{DoxyCompactList}\small\item\em Returns the file\+Descriptor held by the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classSocket_a47696700f9178bb87ef800cb477ecacc}{get\+Ip\+From\+Name} (string hostname, struct hostent $\ast$\&host)
+\begin{DoxyCompactList}\small\item\em Static function to fetch Ip address from domain\+Name/host\+Name. \end{DoxyCompactList}\item 
+static bool \hyperlink{classSocket_a6b9394cf7656ec2f7ae86d57374379ca}{send\+\_\+data} (int file\+Descriptor, string data\+To\+Send)
+\begin{DoxyCompactList}\small\item\em Send data to other end of socket. \end{DoxyCompactList}\item 
+static int \hyperlink{classSocket_a76ba0cc2ab002c701fe8cbab31f95589}{recv\+\_\+data} (int file\+Descriptor, string \&recv\+Data\+Here)
+\begin{DoxyCompactList}\small\item\em Recive data from other end of socket. \end{DoxyCompactList}\item 
+static int \hyperlink{classSocket_a42c17ec1faed733a261a9160a45aa733}{close\+\_\+socket} (int file\+Descriptor)
+\begin{DoxyCompactList}\small\item\em Close the \hyperlink{classSocket}{Socket}. \end{DoxyCompactList}\item 
+static string \hyperlink{classSocket_a02ab07fcadca4429f50dcfebd7e63e9a}{get\+Name\+From\+FD} (int file\+Descriptor)
+\begin{DoxyCompactList}\small\item\em Returns the IP address from File-\/descriptor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class responsible for managin low-\/level sockets. 
+
+This class encapsulates some low-\/level socket functionalities and provide an easy to use interface for handling the sockets. Some of the functions are static becuase they doesn\textquotesingle{}t require access to any class member and moreover need to be able to access these seperately. This function will put the response in the host or else will nullptr. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Socket@{Socket}!Socket@{Socket}}
+\index{Socket@{Socket}!Socket@{Socket}}
+\subsubsection[{\texorpdfstring{Socket()}{Socket()}}]{\setlength{\rightskip}{0pt plus 5cm}Socket\+::\+Socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSocket_a7c3256c4fc6e2c603df73201049fae5a}{}\label{classSocket_a7c3256c4fc6e2c603df73201049fae5a}
+
+
+Constructor of \hyperlink{classSocket}{Socket} Class. 
+
+Creates/opens the low-\/level socket object. \index{Socket@{Socket}!````~Socket@{$\sim$\+Socket}}
+\index{````~Socket@{$\sim$\+Socket}!Socket@{Socket}}
+\subsubsection[{\texorpdfstring{$\sim$\+Socket()}{~Socket()}}]{\setlength{\rightskip}{0pt plus 5cm}Socket\+::$\sim$\+Socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSocket_aeac4eb6379a543d38ed88977d3b6630a}{}\label{classSocket_aeac4eb6379a543d38ed88977d3b6630a}
+
+
+Destructor of \hyperlink{classSocket}{Socket} Class. 
+
+Closes the low-\/level socket object. 
+
+\subsection{Member Function Documentation}
+\index{Socket@{Socket}!close\+\_\+socket@{close\+\_\+socket}}
+\index{close\+\_\+socket@{close\+\_\+socket}!Socket@{Socket}}
+\subsubsection[{\texorpdfstring{close\+\_\+socket(int file\+Descriptor)}{close_socket(int fileDescriptor)}}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\+::close\+\_\+socket (
+\begin{DoxyParamCaption}
+\item[{int}]{file\+Descriptor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSocket_a42c17ec1faed733a261a9160a45aa733}{}\label{classSocket_a42c17ec1faed733a261a9160a45aa733}
+
+
+Close the \hyperlink{classSocket}{Socket}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \textquotesingle{}int} & file\+Descriptor\textquotesingle{} \+: \hyperlink{classSocket}{Socket} which is to be closed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}int\textquotesingle{} \+: 0 on success, else -\/1. 
+\end{DoxyReturn}
+\index{Socket@{Socket}!get\+File\+Descriptor@{get\+File\+Descriptor}}
+\index{get\+File\+Descriptor@{get\+File\+Descriptor}!Socket@{Socket}}
+\subsubsection[{\texorpdfstring{get\+File\+Descriptor()}{getFileDescriptor()}}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\+::get\+File\+Descriptor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSocket_ac4bde0cd12b53244b7c143d056b383ba}{}\label{classSocket_ac4bde0cd12b53244b7c143d056b383ba}
+
+
+Returns the file\+Descriptor held by the object. 
+
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}int\textquotesingle{} \+: \hyperlink{classSocket}{Socket} File-\/\+Descriptor. 
+\end{DoxyReturn}
+\index{Socket@{Socket}!get\+Ip\+From\+Name@{get\+Ip\+From\+Name}}
+\index{get\+Ip\+From\+Name@{get\+Ip\+From\+Name}!Socket@{Socket}}
+\subsubsection[{\texorpdfstring{get\+Ip\+From\+Name(string hostname, struct hostent $\ast$\&host)}{getIpFromName(string hostname, struct hostent *&host)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Socket\+::get\+Ip\+From\+Name (
+\begin{DoxyParamCaption}
+\item[{string}]{hostname, }
+\item[{struct hostent $\ast$\&}]{host}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSocket_a47696700f9178bb87ef800cb477ecacc}{}\label{classSocket_a47696700f9178bb87ef800cb477ecacc}
+
+
+Static function to fetch Ip address from domain\+Name/host\+Name. 
+
+int m\+\_\+socket\+Fd \+: The socket file-\/descriptor associated with the object of this class
+
+Fetch Ip from name and put in $\ast$host structure , passed via reference to the function. 
+\begin{DoxyParams}{Parameters}
+{\em \textquotesingle{}string} & hostname\textquotesingle{} \+: Hostname to fetch IP of. \\
+\hline
+{\em \textquotesingle{}struct} & hostent$\ast$ \&host\textquotesingle{} \+: To store the value of resolved IP address into this argument(passed via reference). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}bool\textquotesingle{} \+: false if fails to resolve, else true. 
+\end{DoxyReturn}
+\index{Socket@{Socket}!get\+Name\+From\+FD@{get\+Name\+From\+FD}}
+\index{get\+Name\+From\+FD@{get\+Name\+From\+FD}!Socket@{Socket}}
+\subsubsection[{\texorpdfstring{get\+Name\+From\+F\+D(int file\+Descriptor)}{getNameFromFD(int fileDescriptor)}}]{\setlength{\rightskip}{0pt plus 5cm}string Socket\+::get\+Name\+From\+FD (
+\begin{DoxyParamCaption}
+\item[{int}]{file\+Descriptor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSocket_a02ab07fcadca4429f50dcfebd7e63e9a}{}\label{classSocket_a02ab07fcadca4429f50dcfebd7e63e9a}
+
+
+Returns the IP address from File-\/descriptor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \textquotesingle{}int} & file\+Descriptor\textquotesingle{} \+: \hyperlink{classSocket}{Socket} which is to be closed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}string\textquotesingle{} \+: empty if fails to resolve, else IP address. 
+\end{DoxyReturn}
+\index{Socket@{Socket}!recv\+\_\+data@{recv\+\_\+data}}
+\index{recv\+\_\+data@{recv\+\_\+data}!Socket@{Socket}}
+\subsubsection[{\texorpdfstring{recv\+\_\+data(int file\+Descriptor, string \&recv\+Data\+Here)}{recv_data(int fileDescriptor, string &recvDataHere)}}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\+::recv\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{int}]{file\+Descriptor, }
+\item[{string \&}]{recv\+Data\+Here}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSocket_a76ba0cc2ab002c701fe8cbab31f95589}{}\label{classSocket_a76ba0cc2ab002c701fe8cbab31f95589}
+
+
+Recive data from other end of socket. 
+
+Recieve the data and store it in the string argument which is passed by reference(\+M\+A\+N\+D\+A\+T\+O\+R\+Y). 
+\begin{DoxyParams}{Parameters}
+{\em \textquotesingle{}int} & file\+Descriptor\textquotesingle{} \+: \hyperlink{classSocket}{Socket} on which data is to be sent. \\
+\hline
+{\em \textquotesingle{}string} & \&recv\+Data\+Here\textquotesingle{} \+: Data which is to be recieved (pass by reference). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}int\textquotesingle{} \+: Returns the size of data. 
+\end{DoxyReturn}
+\index{Socket@{Socket}!send\+\_\+data@{send\+\_\+data}}
+\index{send\+\_\+data@{send\+\_\+data}!Socket@{Socket}}
+\subsubsection[{\texorpdfstring{send\+\_\+data(int file\+Descriptor, string data\+To\+Send)}{send_data(int fileDescriptor, string dataToSend)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Socket\+::send\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{int}]{file\+Descriptor, }
+\item[{string}]{data\+To\+Send}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSocket_a6b9394cf7656ec2f7ae86d57374379ca}{}\label{classSocket_a6b9394cf7656ec2f7ae86d57374379ca}
+
+
+Send data to other end of socket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \textquotesingle{}int} & file\+Descriptor\textquotesingle{} \+: \hyperlink{classSocket}{Socket} on which data is to be sent. \\
+\hline
+{\em \textquotesingle{}string} & data\+To\+Send\textquotesingle{} \+: Data which is to be sent. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}bool\textquotesingle{} \+: false on failure to send, else true. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Socket_8h}{Socket.\+h}\item 
+Socket.\+cpp\end{DoxyCompactItemize}
