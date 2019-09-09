@@ -7,7 +7,13 @@
 
 * It explicitly defines the **SocketClient** and **SocketServer** library, both of which inherits the **Socket** library which contains some of the coon functionalities.
 
-* Uses doxygen for documentation.
+* In order to generate code-documentation.
+
+```bash
+$ doxygen doxygen.conf
+
+# It will create the `docs` directory which will contain the documentation(docs/html/index.html).
+```
 
 |S.No| FileName                           | Content                                                                                           |
 |----| -----------------------------------|:-------------------------------------------------------------------------------------------------:|
